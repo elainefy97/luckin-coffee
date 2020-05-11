@@ -1,0 +1,87 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.container{
+  padding: 0rpx 25rpx;
+}
+.indexBc{
+  width: 100%;
+  height: 550rpx;
+  background-color: #333999;
+  border-bottom-left-radius:30rpx;
+  border-bottom-right-radius:30rpx
+}
+
+.quickLink{
+  margin-top:430rpx;
+  width: 100%;
+  height:450rpx;
+  background-color: white;
+  z-index: 10;
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding:20rpx;
+  border: 10px white;
+  /* padding:10rpx; */
+  border-radius: 20rpx;
+}
+
+.quickLinkFirst{
+  background-color: pink;
+  height: 50%;
+  display: flex;
+  margin-bottom: 10rpx;
+  justify-content: space-between;
+
+}
+.quickLinkFirstLeft{
+  width:calc(60% - 5rpx);
+  background-color: orange;
+}
+.quickLinkFirstRight{
+  width:calc(40% - 5rpx);
+  display: flex;
+  flex-direction: column;
+  background-color: blueviolet;
+  justify-content: space-between;
+}
+.quickLinkFirstRightItem:nth-child(1){
+  height:calc(50% - 5rpx);
+  background-color: darkgreen;
+}
+.quickLinkFirstRightItem:nth-child(2){
+
+  background-color: darkseagreen;
+  height:calc(50% - 5rpx);
+}
+.quickLinkSecond{
+  background-color: blue;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.quickLinkSecond>view{
+  background-color: black;
+  width: 30%;
+}

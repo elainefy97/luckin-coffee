@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/menu/menu",
+    "pages/orders/orders",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333999",
+    "navigationBarTitleText": "瑞鑫咖啡",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./image/tabBar/index.png",
+        "selectedIconPath": "./image/tabBar/indexSelect.png"
+
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "./image/tabBar/menu.png",
+        "selectedIconPath": "./image/tabBar/menuSelect.png"
+
+      },
+      {
+        "pagePath": "pages/orders/orders",
+        "text": "订单",
+        "iconPath": "./image/tabBar/order.png",
+        "selectedIconPath": "./image/tabBar/orderSelect.png"
+
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "./image/tabBar/cart.png",
+        "selectedIconPath": "./image/tabBar/cartSelect.png"
+
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./image/tabBar/user.png",
+        "selectedIconPath": "./image/tabBar/userSelect.png"
+
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
