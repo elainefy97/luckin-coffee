@@ -1,23 +1,95 @@
 <!--index.wxml-->
 <view class="container ">
-	<view class="indexBc " style="position:absolute">
-		<view style="padding:40rpx 25rpx;  ">
-			<componentSwiper style="width:100%;" />
+	<view class="indexBc" style="position:absolute">
+		<view style="padding:40rpx 25rpx;">
+			<componentSwiper indexToSwiperImages="{{swiperImages}}" indexToNews="{{noSapcing}}" style="width:100%;" />
 		</view>
 	</view>
-	<view class="quickLink sildeSpacing" >
-    <view class="quickLinkFirst">
-      <view class="quickLinkFirstLeft"></view>
-      <view class="quickLinkFirstRight">
-        <view class="quickLinkFirstRightItem">1</view>
-        <view class="quickLinkFirstRightItem">2</view>
-      </view>
-    </view>
-    <view class="quickLinkSecond">
-      <view></view>
-      <view></view>
-      <view></view>
-    </view>
+	<view class="quickLink sildeSpacing">
+		<view class="quickLinkFirst">
+			<view class="quickLinkFirstLeft">
+				<image src="../../image/quickLink/quickLinkFirstLeft.png" class="allImage"></image>
+			</view>
+			<view class="quickLinkFirstRight">
+				<view class="quickLinkFirstRightItem textCenter">咖啡钱包</view>
+				<view class="quickLinkFirstRightItem textCenter">送TA咖啡</view>
+			</view>
+		</view>
+		<view class="quickLinkSecond">
+			<block wx:for="{{quickLinkSecondImage}}" wx:key="*this">
+				<view>
+					<image src="{{item}}" class="allImage"></image>
+				</view>
+			</block>
+		</view>
+	</view>
+	<view class="recommend">
+		<view class="recommendTop">
+			<view>为你推荐</view>
+			<view class="fontSizing">
+				<view style="margin-right:10rpx;color:#8186c0">换一批</view>
+				<view>
+					<image style="width:10px;height:23rpx" src="../../image/recommend/refresh.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="recommendList">
+			<view class="recommendItem" wx:for="{{recommendList}}" wx:key="*this">
+				<view class="recommendImageSize">
+					<image class="recommendImageSize" style="border-radius: 20rpx;" src="{{item.pic}}"></image>
+				</view>
+				<view>{{item.name}}</view>
+				<view class="recommendItemAdd">
+					<view>¥{{item.nowPrice}}</view>
+					<view>
+						<image style="width:35rpx;height:35rpx" src="../../image/recommend/adds.png"></image>
+					</view>
+				</view>
+				<view class="textThrough" style="font-size: 20rpx;color:#949494">¥{{item.beforePrice}}</view>
+			</view>
+
+		</view>
+
+	</view>
+	<view class="newsTitle">新鲜事</view>
+	<view class="news">
+		<view class="newsPic">
+			<componentSwiper indexToSwiperImages="{{newsImages}}" indexToNews="{{hasSapcing}}" style="width:100%;" />
+		</view>
+	</view>
+	<view class="product">
+		<view class="productTitle">
+			<view class="productTitleLeft">
+				<view>瑞幸潮品</view>
+				<view class="squareFrame">直邮到家</view>
+			</view>
+			<view class="productTitleRight">
+				<view style="color:#cacaca">更多</view>
+				<view style="width:20px;height:25rpx">
+					<image class="allImage" src="../../image/product/right.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="productItems">
+			<view class="productItem" wx:for="{{productList}}">
+				<view>
+					<image class="allImage" src="{{item.pic}}"></image>
+				</view>
+				<view class="productPadding">{{item.name}}</view>
+				<view class="productPrice productPadding" style="box-sizing:border-box">
+					<view>
+						<view style="color:#ec5300;font-size:35rpx">¥{{item.nowPrice}}</view>
+						<view class="textThrough" style="color:#999999;font-size:25rpx" >¥{{item.beforePrice}}</view>
+					</view>
+					<view>
+						<image style="width:20px;height:50rpx" class="allImage" src="../../image/product/cart-circle.png"></image>
+					</view>
+				</view>
+			</view>
+			<view>
+			</view>
+		</view>
+
 	</view>
 	<!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>

@@ -11,4 +11,17 @@
 .sildeSpacing{
   padding: 25rpx;
 }
+.textCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+.allImage{
+  width: 100%;
+  height: 100%;
+}
+.textThrough{
+  text-decoration:line-through;
+}
 

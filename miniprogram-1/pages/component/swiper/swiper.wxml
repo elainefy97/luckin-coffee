@@ -2,14 +2,23 @@
 <view class="containerSwiper">
 	<view class="page-body">
 		<view class="page-section page-section-spacing swiper">
-			<swiper   indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-				<block wx:for="{{swiperImages}}" wx:key="*this" >
-					<swiper-item>
-						<view  class="swiper-item" style="background-image:url({{item}});background-size:100%;background-position:center"></view>
-					</swiper-item>
+			<swiper wx:if="{{indexToNews}}"  previous-margin="50rpx" circular="false" next-margin="50rpx" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+				<block wx:for="{{indexToSwiperImages}}" wx:key="*this" >
+					<swiper-item >
+						<view  class="swiper-item spaceSiwper" style="background-image:url({{item}});background-size:100%;background-position:center"></view>
+					</swiper-item> 
 				</block>
 			</swiper>
+			<swiper wx:else  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+				<block wx:for="{{indexToSwiperImages}}" wx:key="*this" >
+					<swiper-item >
+						<view  class="swiper-item" style="background-image:url({{item}});background-size:100%;background-position:center"></view>
+					</swiper-item> 
+				</block>
+			</swiper>
+			
 		</view>
+		
 		<!-- <view class="page-section page-section-spacing">
 			<view class="page-section-title">
 			</view>

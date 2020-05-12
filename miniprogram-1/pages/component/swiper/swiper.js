@@ -4,19 +4,22 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    indexToSwiperImages:Array,
+    indexToNews:Boolean,
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    swiperImages: ['../../../image/swiper/1.jpg', '../../../image/swiper/2.jpg', '../../../image/swiper/3.jpg'],
+
     indicatorDots: true,
     vertical: false,
     autoplay: true,
     interval: 2000,
-    duration: 500
+    duration: 500,
+
+
   },
 
   /**

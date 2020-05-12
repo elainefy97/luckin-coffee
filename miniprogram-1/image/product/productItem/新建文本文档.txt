@@ -1,0 +1,12 @@
+[{pic:"../../image/product/productItem/productItem (1).png",name:"太妃巧克力",nowPrice:25.9,beforePrice:32.4},
+{pic:"../../image/product/productItem/productItem (2).png",name:"态度马克杯",nowPrice:59,beforePrice:69},
+{pic:"../../image/product/productItem/productItem (3).png",name:"猫鼠钱马克杯（蓝）",nowPrice:69,beforePrice:89},
+{pic:"../../image/product/productItem/productItem (4).png",name:"猫鼠钱马克杯（红）",nowPrice:69,beforePrice:89},
+{pic:"../../image/product/productItem/productItem (5).png",name:"彩色吸管杯",nowPrice:79,beforePrice:89},
+{pic:"../../image/product/productItem/productItem (6).png",name:"樱花吸管杯",nowPrice:79,beforePrice:99},
+{pic:"../../image/product/productItem/productItem (7).png",name:"按摩枕",nowPrice:25.9,beforePrice:32.4},
+{pic:"../../image/product/productItem/productItem (8).png",name:"保温杯",nowPrice:25.9,beforePrice:32.4},
+{pic:"../../image/product/productItem/productItem (9).png",name:"饮水机",nowPrice:25.9,beforePrice:32.4},
+{pic:"../../image/product/productItem/productItem (10).png",name:"美腿按摩仪",nowPrice:25.9,beforePrice:32.4},
+{pic:"../../image/product/productItem/productItem (10).png",name:"每日坚果",nowPrice:89,beforePrice:99},
+{pic:"../../image/product/productItem/productItem (11).png",name:"麦丽素",nowPrice:35.6,beforePrice:59}]
