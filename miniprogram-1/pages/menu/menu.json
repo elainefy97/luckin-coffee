@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+     "componentSwiper": "/pages/component/swiper/swiper",
+     "i-switch": "../../../dist/switch/index"
+  }
+  
 }

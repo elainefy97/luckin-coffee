@@ -6,20 +6,19 @@ Component({
   properties: {
     indexToSwiperImages:Array,
     indexToNews:Boolean,
+    pageTochangeHeight:Boolean,
+
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-
     indicatorDots: true,
     vertical: false,
     autoplay: true,
     interval: 2000,
     duration: 500,
-
-
   },
 
   /**

@@ -54,8 +54,11 @@ page {
   border-radius:20rpx;
   overflow:hidden ;
 }
+.swiper-item-menu{
+  height: 150px;
+}
 .spaceSiwper{
-
   margin-left: 10rpx;
   margin-right: 10rpx;
 }
+

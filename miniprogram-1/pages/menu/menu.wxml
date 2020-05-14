@@ -1,2 +1,110 @@
 <!--pages/menu/menu.wxml-->
-<text>pages/menu/menu.wxml</text>
+<!-- <text>pages/menu/menu.wxml</text> -->
+<view class="containter">
+	<view class="indexBc" style="position:absolute">
+		<view style="padding:60rpx 25rpx;">
+			<view class='swiper'>
+				<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+					<block wx:for='{{swiperImages}}' wx:key="*this">
+						<swiper-item>
+							<image src="{{item}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad" />
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+		</view>
+		<view class="position">
+			<view class="positionLeft">
+				<view class="positionImage">
+					<image style="width: 50rpx;height: 50rpx;" class="allImage" src="../../image/menu/position.png"></image>
+				</view>
+				<view>
+					<view>东财锦辉沃尔玛店</view>
+					<view  style="font-size:25rpx;color:#aeaeae">据您629m</view>
+				</view>
+			</view>
+			<view class="positionSwitch">
+				<i-switch value="{{switch1}}" size="large" bind:change="onChange" slot="footer">
+					<view slot="open">外送</view>
+					<view slot="close">自提</view>
+				</i-switch>
+			</view>
+		</view>
+		<view class="slideNav">
+			<!-- <view class='under_line'></view> -->
+			<view class='left'>
+				<scroll-view scroll-y scroll-with-animation scroll-left="{{scrollLength}}" class='scrollY' style='height: {{winHeight}}px'>
+					<view class='all clear'>
+						<block wx:key="lists" wx:for="{{lists}}">
+							<view bindtap='jumpIndex' data-menuindex='{{index}}'>
+								<view class='text-style'>
+									<text class="{{indexId==index?'active1':''}}">{{item}}</text>
+									<text class="{{indexId==index?'active':''}}"></text>
+								</view>
+							</view>
+						</block>
+					</view>
+				</scroll-view>
+			</view>
+			<view class="coffeeList">
+				<view class="coffeePageItem" wx:for="{{coffeeItemList}}"  wx:key="*this">
+					<view class="coffeePageItemTitle">{{item.titleClassName}}</view>
+					<view class="" style="font-size:20rpx;color:#a8a8a8;width:70%;margin-bottom:10rpx">{{item.titleDetail}}</view>
+					<!-- <view wx:if="{{item.hasDetail}}" class="coffeeListItem" wx:for="{{item.sonClassImtes}}" wx:key="*this">
+						<view style="color:#999999" class="coffeePageItemTitle">{{item.sonClassItemName}}</view>
+					</view> -->
+					<block wx:if='{{item.hasDetail==false}}'>
+					<!-- <view>{{item.classItem.length}}</view> -->
+						<view class="coffeeListItem" style="border-bottom:{{index<item.classItem.length-1?'3rpx solid #e5e5e5':'none'}}" wx:for="{{item.classItem}}" wx:for-item="outItems"  wx:key="coffeeListItem">
+							<view class="coffeeListItemLeft">
+								<image class="allImage" src="{{outItems.pic}}"></image>
+								<view class="coffeeListItemCenter">
+									<view style="font-size:28rpx;font-weight:600;">{{outItems.name}}</view>
+									<view style="font-size:20rpx;color:#a8a8a8">{{outItems.engDetail}}</view>
+									<view style="font-size:20rpx;color:#a8a8a8">{{outItems.chinaDetail}}</view>
+									<view class="coffeePrice ">
+										<view style="font-size:28rpx;color:#ec5300;margin-right:10rpx">¥{{outItems.nowPrice}}</view>
+										<view class="textThrough" style="font-size:25rpx;color:#999999">¥{{outItems.beforePrice}}</view>
+									</view>
+								</view>
+							</view>
+							<view class="coffeeListItemRight">
+								<image style="width:35rpx;height:35rpx" src="../../image/recommend/adds.png"></image>
+							</view>
+						</view>
+					</block>
+
+					<block wx:if='{{item.hasDetail==true}}'>
+						<view class="allImage"  wx:for="{{item.sonClassImtes}}" wx:for-item="items" wx:key="*this">
+							<view style="color:#a8a8a8;font-style:italic;font-size:25rpx">{{items.sonClassItemName}}</view>
+							<view  style="border-bottom:{{index<items.classItem.length-1?'3rpx solid #e5e5e5':'none'}}" class="coffeeListItem" wx:for="{{items.classItem}}" wx:for-item="classItems">
+								<view class="coffeeListItemLeft">
+									<!-- <view>{{items.classItem.length}}</view> -->
+									<image class="allImage" src="{{classItems.pic}}"></image>
+									<view class="coffeeListItemCenter">
+										<view style="font-size:28rpx;font-weight:600;">{{classItems.name}}</view>
+										<view style="font-size:20rpx;color:#a8a8a8">{{classItems.engDetail}}</view>
+										<view style="font-size:20rpx;color:#a8a8a8">{{classItems.chinaDetail}}</view>
+										<view class="coffeePrice ">
+											<view style="font-size:28rpx;color:#ec5300;margin-right:10rpx">¥{{classItems.nowPrice}}</view>
+											<view class="textThrough" style="font-size:25rpx;color:#999999">¥{{classItems.beforePrice}}</view>
+										</view>
+									</view>
+								</view>
+								<view class="coffeeListItemRight">
+									<image style="width:35rpx;height:35rpx" src="../../image/recommend/adds.png"></image>
+								</view>
+							</view>
+						</view>
+
+					</block>
+					<!--22-->
+
+				</view>
+
+			</view>
+		</view>
+	</view>
+
+
+</view>

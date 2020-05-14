@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container ">
 	<view class="indexBc" style="position:absolute">
-		<view style="padding:40rpx 25rpx;">
+		<view style="padding:60rpx 25rpx;">
 			<componentSwiper indexToSwiperImages="{{swiperImages}}" indexToNews="{{noSapcing}}" style="width:100%;" />
 		</view>
 	</view>
@@ -71,7 +71,7 @@
 			</view>
 		</view>
 		<view class="productItems">
-			<view class="productItem" wx:for="{{productList}}">
+			<view class="productItem" wx:for="{{productList}}" wx:key="*this">
 				<view>
 					<image class="allImage" src="{{item.pic}}"></image>
 				</view>
